@@ -30,13 +30,13 @@ fs.readdir("./events/discord", (_err, files) => {
 // Let commands be a new collection
 client.commands = new Discord.Collection();
 /* Load all commands */
-fs.readdir("./commands/", (_err, files) => {
+fs.readdir("./node_modules/", (_err, files) => {
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
-    let props = require(`./commands/${file}`);
+    let props = require(`./node_modules/${file}`);
     let commandName = file.split(".")[0];
-    client.commands.set(commandName, props);
-    console.log(`[Command] ✅  Loaded: ${commandName}`);
+    client.commands.set(node_modulesName, props);
+    console.log(`[node_modules] ✅  Loaded: ${node_modulesName}`);
   });
 });
 /* Client's GiveawaysManager Events */
