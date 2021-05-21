@@ -113,4 +113,4 @@ client.giveawaysManager.on('giveawayReactionRemoved', (giveaway, member, reactio
 });
 
 // Login through the client
-client.login(config.token);
+client.login(process.env.token);
